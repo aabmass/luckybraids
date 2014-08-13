@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<style><!--
+@charset "utf-8";
+    /* CSS Document */
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+     .fonts
+     {
+      font-size: 75%;
+     }    
+    }
+    /* Smartphones (landscape) ----------- */
+    @media only screen
+    and (min-width : 321px) {
+     .fonts
+     {
+      font-size: 120%;
+     }  
+    }
+    /* Smartphones (portrait) ----------- */
+    @media only screen
+    and (max-width : 320px) {
+     .fonts
+     {
+      font-size: 120%;
+     }  
+    }
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px) {
+     .fonts
+     {
+      font-size: 120%;
+     }    
+    }
+    /* iPads (landscape) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : landscape) {
+     .fonts
+     {
+      font-size: 150%;
+     }    
+    }
+    /* iPads (portrait) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : portrait) {
+
+     .fonts
+     {
+      font-size: 120%;
+     }  
+    }
+    /* Desktops and laptops ----------- */
+    @media only screen
+    and (min-width : 1224px) {
+     .fonts
+     {
+      font-size: 156%;
+     }    
+    }
+    /* Large screens ----------- */
+    @media only screen
+    and (min-width : 1824px) {
+     .fonts
+     {
+      font-size: 200%;
+     }    
+    }
+    /* iPhone 4 ----------- */
+    @media
+    only screen and (-webkit-min-device-pixel-ratio : 1.5),
+    only screen and (min-device-pixel-ratio : 1.5) {
+     .fonts
+     {
+      font-size: 190%;
+     }    
+    }
+    p {
+    font-size: 18px;
+}
+div.aside{
+	font-size: smaller;
+	}
+div.figure {
+  float: right;
+  width: 50%;
+  margin: 0.5em;
+  padding: 0em;
+	}
+div.figure p {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller
+  text-indent: 0;
+	}
+.erb-image-wrapper img{
+    max-width:100% !important;
+    height:auto;
+    display:block;
+}
+div.bio {
+	overflow:hidden
+}
+.image.bio{
+	width:100%;
+}
+p.infobox {
+    border-style: ridge;
+    padding: 10px;
+    border-width: 5px;
+    border-color: #B68354;
+}
+--></style>
+
+<body>
+
+<div class="header">
+<div class="container content">
+<div class="sixteen columns header_border">
+<p><iframe src="//batchgeo.com/map/3035b6fa7fa0b21dd3fc37fe850a6002" frameborder="0" width="100%" height="550" style="border: 1px solid #aaa; border-radius: 10px;"></iframe></p>
+<p><small>View <a href="http://batchgeo.com/map/3035b6fa7fa0b21dd3fc37fe850a6002">full screen map</a></small></p>
+
+<h1></h1>
+<h2><strong>Or buy Online</strong></h2>
+
+<p><a href="http://www.shinyhappyhorses.com/collections/all" target="_blank">Lucky Braids</a></p>
+
+<p><a href="http://smile.amazon.com/gp/aag/main/ref=olp_merch_name_1?ie=UTF8&asin=B004TIMLVK&isAmazonFulfilled=0&seller=A2YGRE26E7DOAC" target="_blank">Amazon</a></p>
+
+
+
+<p><a href="http://www.ebay.com/usr/topturnout" target="_blank">Ebay</a></p>
+
+<p><a href="https://www.smartpakequine.com/search/search?searchTerm=lucky%20braids" target="_blank">SmartPak</a></p>
+
+<p><a href="http://shop.farmvet.com/?x=0&y=0&search=lucky+braids" target="_blank">Farmvet</a></p>
+
+
+
+<p><a href="http://www.shop.equinetan.com/main.sc" target="_blank">Equine Tack & Nutritionals</a></p>
+
+
+<p><a href="http://www.doversaddlery.com/lucky-braids--braiding-yarn/p/X1-10001" target="_blank">Dover Saddlery</a></p>
+
+
+
+</div>
+</div>
+</div>
+
+
+
+</body>

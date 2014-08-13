@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+#map{
+ width:100%;
+  height:500px;
+}
+
+.pdf {
+    -moz-box-shadow:inset 0px 1px 0px 0px #d9d9d9;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #d9d9d9;
+    box-shadow:inset 0px 1px 0px 0px #d9d9d9;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a5addf), color-stop(1, #cbcce0));
+    background:-moz-linear-gradient(top, #a5addf 5%, #cbcce0 100%);
+    background:-webkit-linear-gradient(top, #a5addf 5%, #cbcce0 100%);
+    background:-o-linear-gradient(top, #a5addf 5%, #cbcce0 100%);
+    background:-ms-linear-gradient(top, #a5addf 5%, #cbcce0 100%);
+    background:linear-gradient(to bottom, #a5addf 5%, #cbcce0 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5addf', endColorstr='#cbcce0',GradientType=0);
+    background-color:#a5addf;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #ededed;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Trebuchet MS;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #c7c7c7;
+}
+.pdf:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #cbcce0), color-stop(1, #a5addf));
+    background:-moz-linear-gradient(top, #cbcce0 5%, #a5addf 100%);
+    background:-webkit-linear-gradient(top, #cbcce0 5%, #a5addf 100%);
+    background:-o-linear-gradient(top, #cbcce0 5%, #a5addf 100%);
+    background:-ms-linear-gradient(top, #cbcce0 5%, #a5addf 100%);
+    background:linear-gradient(to bottom, #cbcce0 5%, #a5addf 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cbcce0', endColorstr='#a5addf',GradientType=0);
+    background-color:#cbcce0;
+}
+.pdf:active {
+    position:relative;
+    top:1px;
+}
+.pdf:visited {
+    color: #ffffff;
+}
+.pdf:link {
+    color: #ffffff;
+}
+</style>
+
+<head>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script type="text/javascript" src="http://hpneo.github.io/gmaps/gmaps.js"></script>
+<meta charset=utf-8 />
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      prettyPrint();
+      map = new GMaps({
+        div: '#map',
+        lat: -12.043333,
+        lng: -77.028333
+      });
+      $('#geocoding_form').submit(function(e){
+        e.preventDefault();
+        GMaps.geocode({
+          address: $('#address').val().trim(),
+          callback: function(results, status){
+            if(status=='OK'){
+              var latlng = results[0].geometry.location;
+              map.setCenter(latlng.lat(), latlng.lng());
+              map.addMarker({
+                lat: latlng.lat(),
+                lng: latlng.lng()
+              });
+            }
+          }
+        });
+      });
+    });
+  </script>
+</head>
+
+
+
+
+<body>
+<div>
+<form method="post" id="geocoding_form">
+          <label for="address">Address:</label>
+          <div class="input">
+            <input type="text" id="address" name="address" />
+            <input type="submit" class="btn" value="Search" />
+          </div>
+</form>
+</div>
+
+<div id="map"> </div>
+  
+  
+  
+</body>
+
+
+
+
+<script>
+var map;
+    $(document).ready(function(){
+      map = new GMaps({
+        div: '#map',
+        lat: -12.043333,
+        lng: -77.028333
+      });
+    });
+</script>
+</html>
+

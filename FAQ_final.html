@@ -1,0 +1,672 @@
+<style><!--
+@charset "utf-8";
+    /* CSS Document */
+    /* Smartphones (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px) {
+     .fonts
+     {
+      font-size: 75%;
+     }    
+    }
+    /* Smartphones (landscape) ----------- */
+    @media only screen
+    and (min-width : 321px) {
+     .fonts
+     {
+      font-size: 120%;
+     }  
+    }
+    /* Smartphones (portrait) ----------- */
+    @media only screen
+    and (max-width : 320px) {
+     .fonts
+     {
+      font-size: 120%;
+     }  
+    }
+    /* iPads (portrait and landscape) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px) {
+     .fonts
+     {
+      font-size: 120%;
+     }    
+    }
+    /* iPads (landscape) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : landscape) {
+     .fonts
+     {
+      font-size: 150%;
+     }    
+    }
+    /* iPads (portrait) ----------- */
+    @media only screen
+    and (min-device-width : 768px)
+    and (max-device-width : 1024px)
+    and (orientation : portrait) {
+
+     .fonts
+     {
+      font-size: 120%;
+     }  
+    }
+    /* Desktops and laptops ----------- */
+    @media only screen
+    and (min-width : 1224px) {
+     .fonts
+     {
+      font-size: 156%;
+     }    
+    }
+    /* Large screens ----------- */
+    @media only screen
+    and (min-width : 1824px) {
+     .fonts
+     {
+      font-size: 200%;
+     }    
+    }
+    /* iPhone 4 ----------- */
+    @media
+    only screen and (-webkit-min-device-pixel-ratio : 1.5),
+    only screen and (min-device-pixel-ratio : 1.5) {
+     .fonts
+     {
+      font-size: 190%;
+     }    
+    }
+    p {
+    font-size: 18px;
+}
+div.aside{
+	font-size: smaller;
+	}
+div.figure {
+  float: right;
+  width: 50%;
+  margin: 0.5em;
+  padding: 0em;
+	}
+div.figure p {
+  text-align: center;
+  font-style: italic;
+  font-size: smaller
+  text-indent: 0;
+	}
+.erb-image-wrapper img{
+    max-width:100% !important;
+    height:auto;
+    display:block;
+}
+div.bio {
+	overflow:hidden
+}
+.image.bio{
+	width:100%;
+}
+p.infobox {
+    border-style: ridge;
+    padding: 10px;
+    border-width: 5px;
+    border-color: #B68354;
+}
+
+
+
+.answer {
+    display:none;
+}
+
+h2 {
+    line-height:24px;
+    font-size: 200%;
+    font-weight:700;
+    color:rgb(165,173,218);
+    padding-left:24px;
+    cursor:pointer;
+    background-image:url('../img/open.png');
+    background-position:left;
+    background-repeat:no-repeat;
+}
+
+h2.close {
+    background-image:url('../img/close.png');
+}
+
+
+
+.etabs { margin: 0; padding: 0; }
+.tab { display: inline-block; zoom:1; *display:inline; background: #eee; border: solid 1px #999; border-bottom: none; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; }
+.tab a { font-size: 14px; line-height: 2em; display: block; padding: 0 10px; outline: none; }
+.tab a:hover { text-decoration: underline; }
+.tab.active { background: #fff; padding-top: 6px; position: relative; top: 1px; border-color: #666; }
+.tab a.active { font-weight: bold; }
+.tab-container .panel-container { background: #fff; border: solid #666 1px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
+
+.pdf {
+    -moz-box-shadow:inset 0px 1px 0px 0px #d9d9d9;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #d9d9d9;
+    box-shadow:inset 0px 1px 0px 0px #d9d9d9;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #a5addf), color-stop(1, #cbcce0));
+    background:-moz-linear-gradient(top, #a5addf 5%, #cbcce0 100%);
+    background:-webkit-linear-gradient(top, #a5addf 5%, #cbcce0 100%);
+    background:-o-linear-gradient(top, #a5addf 5%, #cbcce0 100%);
+    background:-ms-linear-gradient(top, #a5addf 5%, #cbcce0 100%);
+    background:linear-gradient(to bottom, #a5addf 5%, #cbcce0 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5addf', endColorstr='#cbcce0',GradientType=0);
+    background-color:#a5addf;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #ededed;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Trebuchet MS;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #c7c7c7;
+}
+.pdf:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #cbcce0), color-stop(1, #a5addf));
+    background:-moz-linear-gradient(top, #cbcce0 5%, #a5addf 100%);
+    background:-webkit-linear-gradient(top, #cbcce0 5%, #a5addf 100%);
+    background:-o-linear-gradient(top, #cbcce0 5%, #a5addf 100%);
+    background:-ms-linear-gradient(top, #cbcce0 5%, #a5addf 100%);
+    background:linear-gradient(to bottom, #cbcce0 5%, #a5addf 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#cbcce0', endColorstr='#a5addf',GradientType=0);
+    background-color:#cbcce0;
+}
+.pdf:active {
+    position:relative;
+    top:1px;
+}
+.pdf:visited {
+    color: #ffffff;
+}
+.pdf:link {
+    color: #ffffff;
+}
+--></style><script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script>// <![CDATA[
+$(document).ready(function(){ $('#tab-container').easytabs(); });
+// ]]></script><script>// <![CDATA[
+(function($,e,b){var c="hashchange",h=document,f,g=$.event.special,i=h.documentMode,d="on"+c in e&&(i===b||i>7);function a(j){j=j||location.href;return"#"+j.replace(/^[^#]*#?(.*)$/,"$1")}$.fn[c]=function(j){return j?this.bind(c,j):this.trigger(c)};$.fn[c].delay=50;g[c]=$.extend(g[c],{setup:function(){if(d){return false}$(f.start)},teardown:function(){if(d){return false}$(f.stop)}});f=(function(){var j={},p,m=a(),k=function(q){return q},l=k,o=k;j.start=function(){p||n()};j.stop=function(){p&&clearTimeout(p);p=b};function n(){var r=a(),q=o(m);if(r!==m){l(m=r,q);$(e).trigger(c)}else{if(q!==m){location.href=location.href.replace(/#.*/,"")+q}}p=setTimeout(n,$.fn[c].delay)}$.browser.msie&&!d&&(function(){var q,r;j.start=function(){if(!q){r=$.fn[c].src;r=r&&r+a();q=$('<iframe tabindex="-1" title="empty"/>').hide().one("load",function(){r||l(a());n()}).attr("src",r||"javascript:0").insertAfter("body")[0].contentWindow;h.onpropertychange=function(){try{if(event.propertyName==="title"){q.document.title=h.title}}catch(s){}}}};j.stop=k;o=function(){return a(q.location.href)};l=function(v,s){var u=q.document,t=$.fn[c].domain;if(v!==s){u.title=h.title;u.open();t&&u.write('<script>document.domain="'+t+'"<\/script>');u.close();q.location.hash=v}}})();return j})()})(jQuery,this);
+// ]]></script><script>// <![CDATA[
+(function(a){a.easytabs=function(j,e){var f=this,q=a(j),i={animate:true,panelActiveClass:"active",tabActiveClass:"active",defaultTab:"li:first-child",animationSpeed:"normal",tabs:"> ul > li",updateHash:true,cycle:false,collapsible:false,collapsedClass:"collapsed",collapsedByDefault:true,uiTabs:false,transitionIn:"fadeIn",transitionOut:"fadeOut",transitionInEasing:"swing",transitionOutEasing:"swing",transitionCollapse:"slideUp",transitionUncollapse:"slideDown",transitionCollapseEasing:"swing",transitionUncollapseEasing:"swing",containerClass:"",tabsClass:"",tabClass:"",panelClass:"",cache:true,event:"click",panelContext:q},h,l,v,m,d,t={fast:200,normal:400,slow:600},r;f.init=function(){f.settings=r=a.extend({},i,e);r.bind_str=r.event+".easytabs";if(r.uiTabs){r.tabActiveClass="ui-tabs-selected";r.containerClass="ui-tabs ui-widget ui-widget-content ui-corner-all";r.tabsClass="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all";r.tabClass="ui-state-default ui-corner-top";r.panelClass="ui-tabs-panel ui-widget-content ui-corner-bottom"}if(r.collapsible&&e.defaultTab!==undefined&&e.collpasedByDefault===undefined){r.collapsedByDefault=false}if(typeof(r.animationSpeed)==="string"){r.animationSpeed=t[r.animationSpeed]}a("a.anchor").remove().prependTo("body");q.data("easytabs",{});f.setTransitions();f.getTabs();b();g();w();n();c();q.attr("data-easytabs",true)};f.setTransitions=function(){v=(r.animate)?{show:r.transitionIn,hide:r.transitionOut,speed:r.animationSpeed,collapse:r.transitionCollapse,uncollapse:r.transitionUncollapse,halfSpeed:r.animationSpeed/2}:{show:"show",hide:"hide",speed:0,collapse:"hide",uncollapse:"show",halfSpeed:0}};f.getTabs=function(){var x;f.tabs=q.find(r.tabs),f.panels=a(),f.tabs.each(function(){var A=a(this),z=A.children("a"),y=A.children("a").data("target");A.data("easytabs",{});if(y!==undefined&&y!==null){A.data("easytabs").ajax=z.attr("href")}else{y=z.attr("href")}y=y.match(/#([^\?]+)/)[1];x=r.panelContext.find("#"+y);if(x.length){x.data("easytabs",{position:x.css("position"),visibility:x.css("visibility")});x.not(r.panelActiveClass).hide();f.panels=f.panels.add(x);A.data("easytabs").panel=x}else{f.tabs=f.tabs.not(A);if("console" in window){console.warn("Warning: tab without matching panel for selector '#"+y+"' removed from set")}}})};f.selectTab=function(x,C){var y=window.location,B=y.hash.match(/^[^\?]*/)[0],z=x.parent().data("easytabs").panel,A=x.parent().data("easytabs").ajax;if(r.collapsible&&!d&&(x.hasClass(r.tabActiveClass)||x.hasClass(r.collapsedClass))){f.toggleTabCollapse(x,z,A,C)}else{if(!x.hasClass(r.tabActiveClass)||!z.hasClass(r.panelActiveClass)){o(x,z,A,C)}else{if(!r.cache){o(x,z,A,C)}}}};f.toggleTabCollapse=function(x,y,z,A){f.panels.stop(true,true);if(u(q,"easytabs:before",[x,y,r])){f.tabs.filter("."+r.tabActiveClass).removeClass(r.tabActiveClass).children().removeClass(r.tabActiveClass);if(x.hasClass(r.collapsedClass)){if(z&&(!r.cache||!x.parent().data("easytabs").cached)){q.trigger("easytabs:ajax:beforeSend",[x,y]);y.load(z,function(C,B,D){x.parent().data("easytabs").cached=true;q.trigger("easytabs:ajax:complete",[x,y,C,B,D])})}x.parent().removeClass(r.collapsedClass).addClass(r.tabActiveClass).children().removeClass(r.collapsedClass).addClass(r.tabActiveClass);y.addClass(r.panelActiveClass)[v.uncollapse](v.speed,r.transitionUncollapseEasing,function(){q.trigger("easytabs:midTransition",[x,y,r]);if(typeof A=="function"){A()}})}else{x.addClass(r.collapsedClass).parent().addClass(r.collapsedClass);y.removeClass(r.panelActiveClass)[v.collapse](v.speed,r.transitionCollapseEasing,function(){q.trigger("easytabs:midTransition",[x,y,r]);if(typeof A=="function"){A()}})}}};f.matchTab=function(x){return f.tabs.find("[href='"+x+"'],[data-target='"+x+"']").first()};f.matchInPanel=function(x){return(x&&f.validId(x)?f.panels.filter(":has("+x+")").first():[])};f.validId=function(x){return x.substr(1).match(/^[A-Za-z]+[A-Za-z0-9\-_:\.].$/)};f.selectTabFromHashChange=function(){var y=window.location.hash.match(/^[^\?]*/)[0],x=f.matchTab(y),z;if(r.updateHash){if(x.length){d=true;f.selectTab(x)}else{z=f.matchInPanel(y);if(z.length){y="#"+z.attr("id");x=f.matchTab(y);d=true;f.selectTab(x)}else{if(!h.hasClass(r.tabActiveClass)&&!r.cycle){if(y===""||f.matchTab(m).length||q.closest(y).length){d=true;f.selectTab(l)}}}}}};f.cycleTabs=function(x){if(r.cycle){x=x%f.tabs.length;$tab=a(f.tabs[x]).children("a").first();d=true;f.selectTab($tab,function(){setTimeout(function(){f.cycleTabs(x+1)},r.cycle)})}};f.publicMethods={select:function(x){var y;if((y=f.tabs.filter(x)).length===0){if((y=f.tabs.find("a[href='"+x+"']")).length===0){if((y=f.tabs.find("a"+x)).length===0){if((y=f.tabs.find("[data-target='"+x+"']")).length===0){if((y=f.tabs.find("a[href$='"+x+"']")).length===0){a.error("Tab '"+x+"' does not exist in tab set")}}}}}else{y=y.children("a").first()}f.selectTab(y)}};var u=function(A,x,z){var y=a.Event(x);A.trigger(y,z);return y.result!==false};var b=function(){q.addClass(r.containerClass);f.tabs.parent().addClass(r.tabsClass);f.tabs.addClass(r.tabClass);f.panels.addClass(r.panelClass)};var g=function(){var y=window.location.hash.match(/^[^\?]*/)[0],x=f.matchTab(y).parent(),z;if(x.length===1){h=x;r.cycle=false}else{z=f.matchInPanel(y);if(z.length){y="#"+z.attr("id");h=f.matchTab(y).parent()}else{h=f.tabs.parent().find(r.defaultTab);if(h.length===0){a.error("The specified default tab ('"+r.defaultTab+"') could not be found in the tab set ('"+r.tabs+"') out of "+f.tabs.length+" tabs.")}}}l=h.children("a").first();p(x)};var p=function(z){var y,x;if(r.collapsible&&z.length===0&&r.collapsedByDefault){h.addClass(r.collapsedClass).children().addClass(r.collapsedClass)}else{y=a(h.data("easytabs").panel);x=h.data("easytabs").ajax;if(x&&(!r.cache||!h.data("easytabs").cached)){q.trigger("easytabs:ajax:beforeSend",[l,y]);y.load(x,function(B,A,C){h.data("easytabs").cached=true;q.trigger("easytabs:ajax:complete",[l,y,B,A,C])})}h.data("easytabs").panel.show().addClass(r.panelActiveClass);h.addClass(r.tabActiveClass).children().addClass(r.tabActiveClass)}q.trigger("easytabs:initialised",[l,y])};var w=function(){f.tabs.children("a").bind(r.bind_str,function(x){r.cycle=false;d=false;f.selectTab(a(this));x.preventDefault?x.preventDefault():x.returnValue=false})};var o=function(z,D,E,H){f.panels.stop(true,true);if(u(q,"easytabs:before",[z,D,r])){var A=f.panels.filter(":visible"),y=D.parent(),F,x,C,G,B=window.location.hash.match(/^[^\?]*/)[0];if(r.animate){F=s(D);x=A.length?k(A):0;C=F-x}m=B;G=function(){q.trigger("easytabs:midTransition",[z,D,r]);if(r.animate&&r.transitionIn=="fadeIn"){if(C<0){y.animate({height:y.height()+C},v.halfSpeed).css({"min-height":""})}}if(r.updateHash&&!d){window.location.hash="#"+D.attr("id")}else{d=false}D[v.show](v.speed,r.transitionInEasing,function(){y.css({height:"","min-height":""});q.trigger("easytabs:after",[z,D,r]);if(typeof H=="function"){H()}})};if(E&&(!r.cache||!z.parent().data("easytabs").cached)){q.trigger("easytabs:ajax:beforeSend",[z,D]);D.load(E,function(J,I,K){z.parent().data("easytabs").cached=true;q.trigger("easytabs:ajax:complete",[z,D,J,I,K])})}if(r.animate&&r.transitionOut=="fadeOut"){if(C>0){y.animate({height:(y.height()+C)},v.halfSpeed)}else{y.css({"min-height":y.height()})}}f.tabs.filter("."+r.tabActiveClass).removeClass(r.tabActiveClass).children().removeClass(r.tabActiveClass);f.tabs.filter("."+r.collapsedClass).removeClass(r.collapsedClass).children().removeClass(r.collapsedClass);z.parent().addClass(r.tabActiveClass).children().addClass(r.tabActiveClass);f.panels.filter("."+r.panelActiveClass).removeClass(r.panelActiveClass);D.addClass(r.panelActiveClass);if(A.length){A[v.hide](v.speed,r.transitionOutEasing,G)}else{D[v.uncollapse](v.speed,r.transitionUncollapseEasing,G)}}};var s=function(z){if(z.data("easytabs")&&z.data("easytabs").lastHeight){return z.data("easytabs").lastHeight}var B=z.css("display"),y,x;try{y=a("<div></div>",{position:"absolute",visibility:"hidden",overflow:"hidden"})}catch(A){y=a("<div></div>",{visibility:"hidden",overflow:"hidden"})}x=z.wrap(y).css({position:"relative",visibility:"hidden",display:"block"}).outerHeight();z.unwrap();z.css({position:z.data("easytabs").position,visibility:z.data("easytabs").visibility,display:B});z.data("easytabs").lastHeight=x;return x};var k=function(y){var x=y.outerHeight();if(y.data("easytabs")){y.data("easytabs").lastHeight=x}else{y.data("easytabs",{lastHeight:x})}return x};var n=function(){if(typeof a(window).hashchange==="function"){a(window).hashchange(function(){f.selectTabFromHashChange()})}else{if(a.address&&typeof a.address.change==="function"){a.address.change(function(){f.selectTabFromHashChange()})}}};var c=function(){var x;if(r.cycle){x=f.tabs.index(h);setTimeout(function(){f.cycleTabs(x+1)},r.cycle)}};f.init()};a.fn.easytabs=function(c){var b=arguments;return this.each(function(){var e=a(this),d=e.data("easytabs");if(undefined===d){d=new a.easytabs(this,c);e.data("easytabs",d)}if(d.publicMethods[c]){return d.publicMethods[c](Array.prototype.slice.call(b,1))}})}})(jQuery);
+// ]]></script>
+<div id="tab-container" class="tab-container">
+<ul class="etabs">
+<li class="tab"><a href="#tabs1-company">Company</a></li>
+<li class="tab"><a href="#tabs1-policy">Policy</a></li>
+<li class="tab"><a href="#tabs1-products">Products/Usage</a></li>
+<li class="tab"><a href="#tabs1-braiding">Braiding</a></li>
+<li class="tab"><a href="#tabs1-grooming">Grooming Issues</a></li>
+<li class="tab"><a href="#tabs1-clinics">Clinics With Ruthann</a></li>
+<li class="tab"><a href="#tabs1-contact">Contact</a></li>
+</ul>
+<div id="tabs1-company"><br />
+<section id="faq-list">
+<h2>• What are Lucky Braids?</h2>
+<div class="answer">
+<p>Ruthann was said to braid luck into the manes of wining horses. However, it was really about her braiding process which got the horses to relax. Then, they’d go to the ring soft and confident, because big hearts win.</p>
+<p>Braiders also celebrate special occasions and sometimes stables, with one colored braid. While many put it in the middle of the mane, that makes the neck look shorter. Ruthann prefers the lucky braid to be about 1/3 of the way down the neck.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Why is Ruthann’s company called Lucky Braids?</h2>
+<div class="answer">
+<p>Initially, Ruthann just wanted to teach braiding so she could move onto making cultural documentaries. In the process of scouting a braider to take her accounts, she realized that her own culture was dying: sound horsemanship. So, her mission expanded to educating, motivating and equipping people to embody top turnout.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• What is Top Turnout?</h2>
+<div class="answer">
+<p>When horses look and feel like winners, that’s top turnout. It represents excellence in horse care and cleanliness, combined with handling to instill quiet confidence. As a result, horses can have big hearts to win.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• What is Ruthann’s mission?</h2>
+<div class="answer">
+<p>To raise the bar of horsemanship, by educating, motivating and equipping people to take better care of horses. Teaching clinics, it became painfully apparent that practices standard among elite horsemen were not being passed to the masses. Closing that gap in understanding and knowledge is our fundamental goal.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Where are you located?</h2>
+<div class="answer">
+<p>We work out of Wellington, Florida, USA. However, if you qualify to host a Top Turnout Clinic, Ruthann will come to you.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Where can I buy Lucky Braids for Top Turnout grooming products?</h2>
+<div class="answer">
+<p>In addition to our online store <a href="http://www.shinyhappyhorses.com/collections/all" target="_blank">LuckyBraids.com,</a> stores and websites that carry our products are listed here: <a href="http://www.shinyhappyhorses.com/pages/stores" target="_blank">Locations.</a></p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• How can I buy your products locally?</h2>
+<div class="answer">
+<p>Existing dealers are listed here: <a href="http://www.shinyhappyhorses.com/pages/stores" target="_blank">Locations.</a> Most of our new dealers are rooted in customer demand. So, at your local tack shop, ask the buyer of grooming products to order ours. They can call us at: 781-665-5988. Thank you!</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• How can we become dealers?</h2>
+<div class="answer">
+<p>If you own a shop and would like to carry our products, please give us a call or email admin@luckybraids.com.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Can I order your products from outside the United States?</h2>
+<div class="answer">
+<p>Yes, we ship anywhere. The shopping cart will calculate your postage.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Are your products guaranteed?</h2>
+<div class="answer">
+<p>Yes. If you are not completely satisfied, we’ll refund you. All we ask is that you contact the office to assure you are using it correctly: 781-665-5988.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Where are your products made?</h2>
+<div class="answer">
+<p>Lucky Braids products are all manufactured in the United States.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Is there animal testing?</h2>
+<div class="answer">
+<p>There is no laboratory testing.</p>
+<p>We would never knowingly cause discomfort to nor injure animals.</p>
+</div>
+</section>
+<!-- End of Tab --></div>
+<div id="tabs1-policy"><br />
+<section id="faq-list">
+<h2>• Are your products guaranteed?</h2>
+<div class="answer">
+<p>Yes. If you are not completely satisfied, we’ll refund you. All we ask is that you contact the office to assure you are using it correctly: 781-665-5988.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• What is your ship time?</h2>
+<div class="answer">
+<p>Within the United States, you’ll normally receive your product in 2-5 business days.</p>
+</div>
+</section>
+<!-- End of Tab --></div>
+<div id="tabs1-products"><br />
+<section id="faq-list">
+<h2 style="color: #969696; text-indent: 50px;">General Questions</h2>
+<div class="answer">
+<section id="faq-list">
+<h2>• Why does Ruthann offer products?</h2>
+<div class="answer">
+<p>Lucky Braids’ distinguished grooming products are yet another way quality horse care can be easier.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• How are Lucky Braids products unique?</h2>
+<div class="answer">
+<p>Most companies want to sell you lots of products. Like a bad mechanic, they often solve one problem and cause another: Only to sell you another product.</p>
+<p>Ruthann is a groom and braider at heart. Her goal is not to treat problems. It is to have LESS to treat, manage, ship and buy. The idea is for it to be easier to take better care of horses.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Are LuckyBraids products cost-effective?</h2>
+<div class="answer">
+<p>YES. Our coat care products are the most effective and versatile. You can use 2-3 products, instead of 9-11 conventional ones. Which means better results, fewer treatments and lower costs. The braiding products can lead you to save or make you large sums of money.</p>
+</div>
+</section>
+</div>
+</section>
+<section id="faq-list">
+<h2 style="color: #969696; text-indent: 50px;">All-In-One Shampoo Questions</h2>
+<div class="answer">
+<section id="faq-list">
+<h2>• Is the Shampoo safe for dogs?</h2>
+<div class="answer">
+<p>YES! Dogs love it, especially if they tend to be itchy. Those that get bathed at least once a week tend to be tick and flea free. ~Ruthann</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Do chickens like the Shampoo?</h2>
+<div class="answer">
+<p>They love the smell! Also, that LuckyBraids All-In-One Shampoo helps minimize bug, skin and feather issues. Show chickens stay cleaner and fluffier. Big hit!</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• How often should I bathe?</h2>
+<div class="answer">
+<p>Some horses on the road get bathed every day. Their coats look great. Though, I recommend more currying than lathering. Many people have told me theirs is the only horse in the barn using our LuckyBraids Shampoo, and the only horse without ticks and not getting eaten alive. Last week three people told me that. ~Ruthann</p>
+<p>If you want to keep the ticks, fleas and flies down, bathe at least once a week.</p>
+<p>Is the LuckyBraids Shampoo just for coats, manes and tails? YES. This is truly: all-in-one. Use it instead of: daily, whitening anti-bacterial and anti-fungal shampoos, stain remover, conditioner, detangler, shine agents and scratches medication.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• How often should I shampoo?</h2>
+<div class="answer">
+<p>To help reduce crud and itching, as well as deter ticks and bugs, we recommend bathing one a week. As a therapeutic measure for severe skin disease and itching, you can bathe daily. As always, be mindful. Listen to your horse and its condition. Do what helps, while continuing a vigorous daily grooming routine.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Do bugs like the All-In-One Shampoo?</h2>
+<div class="answer">
+<p>NO. Many have reported the horses that get bathed every 4-7 days with Lucky Braids are not getting ticks and eaten alive like all the other horses.</p>
+</div>
+</section>
+</div>
+</section>
+<section id="faq-list">
+<h2 style="color: #969696; text-indent: 50px;">Handy Salve Questions</h2>
+<div class="answer">
+<section id="faq-list">
+<h2>• How often should I apply the Handy Salve?</h2>
+<div class="answer">
+<p>It depends. To support rapid healing, apply 1-4 times a day, preferably to clean skin. If the abrasion is new and not serious, once may be enough to disinfect and promote healing.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Can I use this on dogs?</h2>
+<div class="answer">
+<p>YES. For hotspots, the Handy Salve helps stop break the itching cycle. Our All-In-One Shampoo will help keep your dog out of the itching loop. Please note: you don’t want the dog eating the Salve. It readily absorbs into the skin. So, apply and hold the head or go for a walk. Then wipe the skin clean. Many dogs that have been tortured by hotspots for years, whose people have tried everything, finally find relief with Lucky Braids Salve and Shampoo.</p>
+</div>
+</section>
+</div>
+</section>
+<section id="faq-list">
+<h2 style="color: #969696; text-indent: 50px;">Whitener/Dry Wash Questions</h2>
+<div class="answer">
+<section id="faq-list">
+<h2>• If this spray is for ALL COLORS, why do you call it “Whitener/Dry Wash?”</h2>
+<div class="answer">
+<p>At first, I thought most people would be wanting something for stains. Since then, we realized how great it is to have something to quick clean in the cold or when horses’ feet are bad. Since it is not a bleach nor a detergent, it works great on any color.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Does it dry out the coat?</h2>
+<div class="answer">
+<p>The Lucky Braids Whitener/Dry Wash does NOT parch the coat, nor leave a residue. Other products are drying. So they leave coats porous and parched- attracting and readily absorbing stains.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• How do I treat new stains, mud and saddle marks?</h2>
+<div class="answer">
+<p>For new dirt, simply spray on the Whitener/Dry Wash. With new dirt, you can see the dirt bead up. Wipe off with a towel.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• I have tough old stains. I’ve tried everything. Can you help me get rid of them?</h2>
+<div class="answer">
+<p>Our spray is not a detergent, but an enzyme. It breaks the bond between the hair and dirt. So you may want to use your fingers to push it in between and around the hair. Let it SIT. Many are tempted to rub with a towel. On old stains, it is better to let the solution sit for a few minutes to dissolve the bond.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• I used your spray, but my horse still has a tailstain. Why?</h2>
+<div class="answer">
+<p>Old stains get sealed in with detanglers, fly spray, etc. The buildup locks in urine and discolors hair. Our spray is not designed to strip hair. So, initially, it may take a few attempts to get through the buildup. The good news is that once you get past the old stain, it will be much easier to keep your horse clean with Lucky Braids products. Different game.</p>
+<p>Sometimes the hair gets so stripped with harsh detergents, they invite stains to penetrate very deeply. In some cases, those stains also take a couple treatments to totally dissolve the stains. Once clean, if you use only Lucky Braids All-In-One Shampoo, that should not happen again.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Will this spray leave a yellow shadow like Cowboy Magic or alcohol?</h2>
+<div class="answer">
+<p>NO. This spray leaves no yellow. It cleans, leaving hair super shiny.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• If this spray is for ALL COLORS, why do you call it “Whitener/Dry Wash?”</h2>
+<div class="answer">
+<p>At first, I thought most people would be wanting something for stains. Since then, we realized how great it is to have something to quick clean in the cold or when horses’ feet are bad. Since it is not a bleach nor a detergent, it works great on any color.</p>
+</div>
+</section>
+</div>
+</section>
+<section id="faq-list">
+<h2 style="color: #969696; text-indent: 50px;">DVD/Tool Questions</h2>
+<div class="answer">
+<section id="faq-list">
+<h2>• I am a beginner. Will this help me?</h2>
+<div class="answer">
+<p>YES. Not only will this system teach you secrets to braiding like a top pro. It will help optimize your learning curve!</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• I am a very experienced braider. Is it worth it for me to get the DVD/Tool?</h2>
+<div class="answer">
+<p>YES. You can always get faster or more consistent. If the DVD suggests you to change your finger form, braids may get worse until you get the hang of it. Then, they’ll be much better, you’ll be able to braid faster and more comfortably.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• There are other videos. How is this one different?</h2>
+<div class="answer">
+<p>No other top braider is sharing their secrets. This is the only video that effectively teaches the fine tuned technique. Before making this video, I had taught braiding clinics and worked in film and TV production for 10 years. So, I had figured out how to make an effective how-to, teach this particular craft as well as speak to your inclinations. In the step-by-step video, you can see the process up close and slowly. The idea is that this video not only shows you how to braid, but also optimize your learning curve.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Can I buy only the DVD?</h2>
+<div class="answer">
+<p>Initially, we sold the video separately. However, when people realized they needed the Essential Tool to braid most efficiently, they wanted it. To buy it separately was more expensive, so they got upset. Bottomline: if you want to braid well, we’ll hook you up. The DVD comes with tools, which are also available separately, should you want to share the DVD. Our Braiding Yarn completes your kit.</p>
+</div>
+</section>
+</div>
+</section>
+<section id="faq-list">
+<h2 style="color: #969696; text-indent: 50px;">Braiding Yarn Questions</h2>
+<div class="answer">
+<section id="faq-list">
+<h2>• Why does braiding yarn matter?</h2>
+<div class="answer">
+<p>“I am a good braider, but can’t get that crisp bottomline to last the day with other yarns. ~Ruthann Our Braiding Yarn is: strong so you can crank on it and stretches for braids that are sturdy and even.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Why does yarn color matter?</h2>
+<div class="answer">
+<p>Preferably, you want to use a color that is about the same as the mane. That low contrast keeps the eye focused on the bottomline, instead of flecks of color at the crest. So, the conformation is enhanced.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• My horse is chestnut, sorrel or liver chestnut. What color should I use?</h2>
+<div class="answer">
+<p>If the mane is any chestnut color, our chestnut yarn will do. If the horse is liver chestnut, you can choose between chestnut or black yarn.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Which yarn should I use on a flaxen mane?</h2>
+<div class="answer">
+<p>The light grey is perfect for flaxen manes as well. When it is pulled tight, the color blends beautifully.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Which yarn should I use on a mostly white mane?</h2>
+<div class="answer">
+<p>Technically, horses are considered light grey, not white. So, our light grey yarn is perfect for you.Technically, horses are considered light grey, not white. So, our light grey yarn is perfect for you.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Which yarn should I use on a salt &amp; pepper mane?</h2>
+<div class="answer">
+<p>Use what is most similar to the mane. Our charcoal yarn is developed for darker blended names. Sometimes the hair underneath is lighter, so you can choose between light grey and charcoal.</p>
+</div>
+</section>
+</div>
+</section>
+<!-- End of Tab --></div>
+<div id="tabs1-braiding"><br />
+<section id="faq-list">
+<h2>• What can I do about a horse that is rubbing braids?</h2>
+<div class="answer">
+<p>Lucky Braids All-In-One Shampoo soothes irritated skin. Plus, just having manes clean makes them more comfortable. Also, make sure your technique is sound. When all the hair stands have even pressure, they are more comfortable. The Lucky Braids DVD/Tool does show how to smooth the hair at the top of the braid, which reduces some rubbing.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• How can I stop wicked tailrubbing?</h2>
+<div class="answer">
+<p>The first thing you want to do is be sure that under the tail and the teats or sheath are very clean. Some mares need to be wiped daily. Sheath cleaning once a month is a good habit, weather permitting. Don’t use flyspray nor detangler on irritated areas. Most horses stop itching with LuckyBraids All-In-One Shampoo. For severe cases, our Handy Salve can cool the skin to break the cycle of rubbing and All-In-One Shampoo keep you out of the loop.</p>
+<p>Here’s more on why our products work best: <a href="http://www.shinyhappyhorses.com/pages/tail-rubbing">Tail Rubbing</a></p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• What can I do about a horse that is rubbing braids?</h2>
+<div class="answer">
+<p>Lucky Braids All-In-One Shampoo soothes irritated skin. Plus, just having manes clean makes them more comfortable. Also, make sure your technique is sound. When all the hair stands have even pressure, they are more comfortable. The Lucky Braids DVD/Tool does show how to smooth the hair at the top of the braid, which reduces some rubbing.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• How can I train my horse’s mane to lay flat and on the proper side?</h2>
+<div class="answer">
+<p>Here are tips for mane taming: <a href="http://www.shinyhappyhorses.com/pages/mane-taming">Mane Taming</a></p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• My horse does not like mane pulling. What can I do?</h2>
+<div class="answer">
+<p>Here are tips to help most horses to find pulling relaxing: <a href="http://www.chronofhorse.com/Images/0506PullingTips.pdf">Pulling Tips</a></p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• I am a beginner braider. How can I improve?</h2>
+<div class="answer">
+<p>There is something for everyone in the Lucky Braids DVD/Tool. Once you have studied Ruthann’s formula, you can take online lessons with her.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• I am an experienced braider. How can I get better?</h2>
+<div class="answer">
+<p>If you have learned Ruthann’s specific formula, you can take online lessons with her.</p>
+</div>
+</section>
+<!-- End of Tab --></div>
+<div id="tabs1-grooming"><br />
+<section id="faq-list">
+<h2>• How do I remove stains?</h2>
+<div class="answer">
+<p>Most discoloration comes out with one bath with Lucky Braids All-In-One Shampoo. The Dry Wash spray can be used to dissolve the toughest stains. Let it sit in the hair to do its action, before wiping with a towel. Tough old and deeply penetrated stains may need more time damp with the spray. Though, once you get ahead of the stains, if you continue to use only Lucky Braids Shampoo, you’ll find it is much easier to keep even light colored horses sparkling and clean.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• How can I prevent hair breakage?</h2>
+<div class="answer">
+<p>Drying shampoos and detanglers leave hair brittle to break. Lucky Braids Shampoo moisturizes and nourishes to strengthen hair. To best protect it, follow this procedure: <a href="http://www.shinyhappyhorses.com/pages/tail-tips">Mane Taming</a></p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• How should I treat scratches?</h2>
+<div class="answer">
+<p>Your best defense is to only put bone-dry legs in or out. ALWAYS thoroughly dry legs, preferably with vigorous toweling. Lucky Braids Shampoo helps scratches heal. If they are sore/hot, our Handy Salve will give an extra boost to the healing. Though, it is not recommended for FEI horses.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• How can I treat a coat with crud or fungus?</h2>
+<div class="answer">
+<p>You should see improvement with one Lucky Braids All-In-One Shampoo bath. If severe, lather and wait a couple minutes before rinsing.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• My grey is always dirty! What can I do?</h2>
+<div class="answer">
+<p>That’s because its coat is dry, attracting the dirt. A shampoo that leaves residue can also attract dirt. The “Consumer Report” of the horse industry, Horse Journal, named Lucky Braids All-In-One Shampoo and Spray TOP PICK for Greys and Whites. Other products dry them out. So, hair may be clean for a moment, but then gets dirtier.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• How can I get my horse’s tail full naturally?</h2>
+<div class="answer">
+<p>Our paradigm is distinctive and proven. Basically, use only Lucky Braids Shampoo and comb wet. You won’t need conditioner nor detangler. If mud is in the tail and you don’t want to wash it, our enzymatic spray will clean ANY COLOR. Here are details to the fundamental tail care: <a href="http://www.shinyhappyhorses.com/pages/tail-tips">Mane Taming</a></p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• How can I stop wicked tail rubbing?</h2>
+<div class="answer">
+<p>The first thing you want to do is be sure that under the tail and the teats or sheath are very clean. Some mares need to be wiped daily. Sheath cleaning once a month is a good habit, weather permitting. Don’t use flyspray nor detangler on irritated areas. Most horses stop itching with LuckyBraids All-In-One Shampoo. For severe cases, our Handy Salve can cool the skin to break the cycle of rubbing and All-In-One Shampoo keep you out of the loop.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• My horse had rubs from boots or blankets. What can I do about them?</h2>
+<div class="answer">
+<p>Always make sure equipment is clean and well-fitted. Dry skin and hair are not supple, hence prone to rubs. So, curry lots to stimulate natural protective oils. Lucky Braids All-In-One Shampoo will strengthen hair and skin. Lucky Braids Handy Salve will help skin heal and hair grow back quickly.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• It is too cold to bathe, how should I get ready to show?</h2>
+<div class="answer">
+<p>You can pull the dirt off ANY COLOR coat without a hose! Lucky Braids Whitener/Dry Wash is color safe. Just spray it on, wait a few seconds and wipe off with a towel. Horses come super clean. Even, ringside in the mud!</p>
+</div>
+</section>
+<!-- End of Tab --></div>
+<div id="tabs1-clinics"><br />
+<section id="faq-list">
+<h2>• Where does Ruthann teach Top Turnout Clinics and Train Grooms?</h2>
+<div class="answer">
+<p>If you qualify to host a clinic, Ruthann will travel to your facility. For more information, please read about clinics on the bottom of the About Ruthann page. Then call: 781-665-5988.</p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• I’d like to organize a clinic. How do I proceed?</h2>
+<div class="answer">
+<p>Please read about clinics on the bottom of the About Ruthann page. Then call: 781-665-5988.</p>
+</div>
+</section>
+<!-- End of Tab --></div>
+<div id="tabs1-contact"><br />
+<section id="faq-list">
+<h2>• How can I ask Ruthann a question?</h2>
+<div class="answer">
+<p>Feel free to send her a question via the Contact link below. Or, send a message via <a href="https://www.facebook.com/ShinyHappyHorses">Facebook</a></p>
+</div>
+</section>
+<section id="faq-list">
+<h2>• Can I call?</h2>
+<div class="answer">
+<p>Yes. The office number is: 781-665-5988. We are on Eastern Standard Time.</p>
+</div>
+</section>
+<!-- End of Tab --></div>
+<!-- End of Tab Div --></div>
+<!-- faq script --><script>// <![CDATA[
+jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+jQuery('.tabs ' + currentAttrValue).slideDown(400).siblings().slideUp(400);
+ 
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+    
+});
+// ]]></script><!-- faq script2 --><script>// <![CDATA[
+jQuery(document).ready(function() {
+    jQuery('.tabs2 .tab2-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+jQuery('.tabs2 ' + currentAttrValue).slideDown(400).siblings().slideUp(400);
+ 
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+    
+});
+// ]]></script><!-- faq script3 --><script>// <![CDATA[
+$(document).ready(function() {
+    $('#faq-list h2').click(function() {
+
+        $(this).next('.answer').slideToggle(500);
+        $(this).toggleClass('close');
+
+    });
+}); // end ready
+// ]]></script>
