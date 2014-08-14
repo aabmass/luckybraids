@@ -277,6 +277,7 @@ ctitle:hover {
   }
 }
 
+/** CSS for testimonials **/
 .testimonial {
 background:#B7EDFF;
 position:relative;
@@ -336,6 +337,29 @@ color:#666;
 </head>
 
 <body>
+
+<div class="controls">
+  <label>Filter:</label>
+  
+  <button class="filter" data-filter="all">All</button>
+  <button class="filter" data-filter=".category-1"></button>
+  <button class="filter" data-filter=".category-2">Stable Management</button>
+  <button class="filter" data-filter=".category-3">Mane & Tail Care</button>
+  <button class="filter" data-filter=".category-4">Braiding</button>
+  <button class="filter" data-filter=".category-5">Safety</button>
+  <button class="filter" data-filter=".category-6">Ruthann</button>
+  <button class="filter" data-filter=".category-7">Salutes</button>
+  <button class="filter" data-filter=".category-8">Smart Ideas</button>  
+
+
+  <!--
+  <label>Sort:</label>
+  
+  <button class="sort" data-sort="myorder:asc">Asc</button>
+  <button class="sort" data-sort="myorder:desc">Desc</button>
+  -->
+  
+</div>
 
 <div id="Container" class="container">
     <div class="mix category-1" >
@@ -403,9 +427,6 @@ color:#666;
         <p class="testimonial-author">Obi-Wan Kenobi</p>
     </div>
 
-
-    <div class="gap"></div>
-    <div class="gap"></div>
 </div>
 
 <script>
