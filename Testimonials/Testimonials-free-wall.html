@@ -1,0 +1,118 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://cdn.shopify.com/s/files/1/0529/1857/t/16/assets/freewall.js"></script>
+<style type="text/css">
+/* Freewall Style */
+#container {
+    width: 80%;
+    margin: auto;
+}
+.testimonial-item {
+    width: 33%;
+    height: 30%;
+}
+.item {
+    background: rgb(135, 199, 135);
+    width: 320px;
+    height: 320px;
+}
+
+/** CSS for testimonials **/
+.testimonial {
+    background:#B7EDFF;
+    position:relative;
+    font-family:Georgia, serif;
+    color:#666;
+    border-radius:5px;
+    font-style:italic;
+    text-shadow:0 1px 0 #ECFBFF;
+    background-image:linear-gradient(#CEF3FF,#B7EDFF);
+    margin:0;
+    padding:10px 50px;
+}
+
+.testimonial:before,.testimonial:after {
+    content:"\201C";
+    position:absolute;
+    font-size:80px;
+    line-height:1;
+    color:#999;
+    font-style:normal;
+}
+
+.testimonial:before {
+    top:0;
+    left:10px;
+}
+
+.testimonial:after {
+    content:"\201D";
+    right:10px;
+    bottom:-.5em;
+}
+
+.arrow-down {
+    width:0;
+    height:0;
+    border-left:15px solid transparent;
+    border-right:15px solid transparent;
+    border-top:15px solid #B7EDFF;
+    margin:0 0 0 25px;
+}
+
+.testimonial-author {
+    font-family:Arial, Helvetica, sans-serif;
+    color:#999;
+    text-align:left;
+    margin:0 0 0 25px;
+}
+
+.testimonial-author span {
+    font-size:12px;
+    color:#666;
+}
+</style>
+</head>
+<body>
+<div id="container">
+    <div class="testimonial-item">
+        <div class="testimonial">
+            <p>This product is fantastic! This is a sample testimonial. Before I bought lucky braids, ....</p>
+        </div>
+        <div class="arrow-down"></div>
+        <p class="testimonial-author">Obi-Wan Kenobi</p>
+    </div>
+    <div class="testimonial-item">
+        <div class="testimonial">
+            <p>This product is fantastic! This is a sample testimonial. Before I bought lucky braids, ....</p>
+        </div>
+        <div class="arrow-down"></div>
+        <p class="testimonial-author">Obi-Wan Kenobi</p>
+    </div>
+    <div class="testimonial-item">
+        <div class="testimonial">
+            <p>This product is fantastic! This is a sample testimonial. Before I bought lucky braids, ....</p>
+        </div>
+        <div class="arrow-down"></div>
+        <p class="testimonial-author">Obi-Wan Kenobi</p>
+    </div>
+    <div class="testimonial-item">
+        <div class="testimonial">
+            <p>This product is fantastic! This is a sample testimonial. Before I bought lucky braids, ....</p>
+        </div>
+        <div class="arrow-down"></div>
+        <p class="testimonial-author">Obi-Wan Kenobi</p>
+    </div>
+
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+<script>
+$(function() {
+        var wall = new freewall("#container");
+        wall.fitWidth();
+        });
+</script>
