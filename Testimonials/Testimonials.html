@@ -1,3 +1,4 @@
+<img src="https://cdn.shopify.com/s/files/1/0529/1857/files/Testimonials-homepage_web.jpg?4090" visibility:="" hidden="" />
 <style><!--
 @charset "utf-8";
     /* CSS Document */
@@ -80,8 +81,10 @@
       font-size: 190%;
      }    
     }
-    p {
+div .testimonial {
     font-size: 18px;
+    height: 300px;
+    width: 300px;
 }
 div.aside{
 	font-size: smaller;
@@ -183,6 +186,7 @@ button + label{
 .container .gap{
   display: inline-block;
   width: 49%;
+  vertical-align: top;
 }
 
 .container .mix{
@@ -266,27 +270,25 @@ ctitle:hover {
 @media all and (min-width: 420px){
   .container .mix,
   .container .gap{
-    width: 32%;
+    width: 36%;
   }
 }
 
 @media all and (min-width: 640px){
   .container .mix,
   .container .gap{
-    width: 23.5%;
+    width: 30%;
   }
 }
 
 /** CSS for testimonials **/
 .testimonial {
-background:#B7EDFF;
+background-color: rgba(113, 123, 194, 0.25);
 position:relative;
 font-family:Georgia, serif;
-color:#666;
 border-radius:5px;
 font-style:italic;
 text-shadow:0 1px 0 #ECFBFF;
-background-image:linear-gradient(#CEF3FF,#B7EDFF);
 margin:0;
 padding:10px 50px;
 }
@@ -294,7 +296,7 @@ padding:10px 50px;
 .testimonial:before,.testimonial:after {
 content:"\201C";
 position:absolute;
-font-size:80px;
+font-size:70px;
 line-height:1;
 color:#999;
 font-style:normal;
@@ -316,7 +318,7 @@ width:0;
 height:0;
 border-left:15px solid transparent;
 border-right:15px solid transparent;
-border-top:15px solid #B7EDFF;
+border-top:15px solid rgba(113, 123, 194, 0.25);
 margin:0 0 0 25px;
 }
 
@@ -325,16 +327,56 @@ font-family:Arial, Helvetica, sans-serif;
 color:#999;
 text-align:left;
 margin:0 0 0 25px;
+font-size: 30px;
 }
 
-.testimonial-author span {
-font-size:12px;
-color:#666;
+a:visited {
+    background-color: rgba(0, 0, 0, 0);
 }
+
+/*
+.ellipsis {
+    overflow: hidden;
+    height: 150px;
+    width: px;
+    line-height: 25px;
+    margin: 20px;
+}
+
+.ellipsis:before {
+    content:"";
+    float: left;
+    width: 5px; height: 200px; }
+
+.ellipsis > *:first-child {
+    float: right;
+    width: 100%;
+    margin-left: -5px; }        
+
+.ellipsis:after {
+    content: "\02026";  
+
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+
+    float: right; position: relative;
+    top: -25px; left: 100%; 
+    width: 3em; margin-left: -3em;
+    padding-right: 5px;
+
+    text-align: right;
+
+    background: -webkit-gradient(linear, left top, right top,
+    from(rgba(255, 255, 255, 0)), to(white), color-stop(50%, white));
+    background: -moz-linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white);           
+    background: -o-linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white);
+    background: -ms-linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white); }
+*/
 --></style>
-<head>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-</head>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <body>
 
@@ -342,19 +384,15 @@ color:#666;
   <label>Filter:</label>
   
   <button class="filter" data-filter="all">All</button>
-  <button class="filter" data-filter=".category-1"></button>
-  <button class="filter" data-filter=".category-2">Stable Management</button>
-  <button class="filter" data-filter=".category-3">Mane & Tail Care</button>
+  <button class="filter" data-filter=".category-1">All-In-One Shampoo</button>
+  <button class="filter" data-filter=".category-2">Whitener/Dry Wash</button>
+  <button class="filter" data-filter=".category-3">Handy Salve</button>
   <button class="filter" data-filter=".category-4">Braiding</button>
-  <button class="filter" data-filter=".category-5">Safety</button>
-  <button class="filter" data-filter=".category-6">Ruthann</button>
-  <button class="filter" data-filter=".category-7">Salutes</button>
-  <button class="filter" data-filter=".category-8">Smart Ideas</button>  
-
 
   <!--
   <label>Sort:</label>
   
+
   <button class="sort" data-sort="myorder:asc">Asc</button>
   <button class="sort" data-sort="myorder:desc">Desc</button>
   -->
@@ -362,70 +400,68 @@ color:#666;
 </div>
 
 <div id="Container" class="container">
-    <div class="mix category-1" >
-        <div class="testimonial">
-            <p>This product is fantastic! This is a sample testimonial. Before I bought lucky braids, ....</p>
-        </div>
-        <div class="arrow-down"></div>
-        <p class="testimonial-author">Obi-Wan Kenobi</p>
-    </div>
 
-    <div class="mix category-1" >
-        <div class="testimonial">
-            <p>This product is fantastic! This is a sample testimonial. Before I bought lucky braids, ....</p>
+    <!-- Categories:
+      -    1: Shampoo
+      -    2: Whitener/Dry Wash
+      -    3: Handy Salve
+      -    4: Braiding
+      -->
+    
+    <!-- MICHELLE Shampoo-->
+    <a href="http://www.shinyhappyhorses.com/pages/michelle-jordan-clasby-testimonial">
+        <div class="mix category-1">
+            <div class="testimonial">
+            <img src="https://cdn.shopify.com/s/files/1/0529/1857/files/Michelle_Jordan_Clasby_BEFORE.jpg?4092" alt="Kim" style="margin:0 5px 0 0;"/>
+                <p class="ellipsis">I love your product. It's perfect for my 11 month old gypsy filly. Here's the “before”...</p>
+            </div>
+            <div class="arrow-down"></div>
+            <p class="testimonial-author">Michelle Jordan Clasby</p>
         </div>
-        <div class="arrow-down"></div>
-        <p class="testimonial-author">Obi-Wan Kenobi</p>
-    </div>
-    <div class="mix category-1" >
-        <div class="testimonial">
-            <p>This product is fantastic! This is a sample testimonial. Before I bought lucky braids, ....</p>
+    </a>
+
+    <!-- KIM Shampoo-->
+    <a href="http://www.shinyhappyhorses.com/pages/kim-prince-testimonial">
+        <div class="mix category-1">
+            <div class="testimonial">
+            <img src="https://cdn.shopify.com/s/files/1/0529/1857/files/KimPrince.jpg?3927" alt="Kim" style="margin:0 5px 0 0;"/>
+                <p class="ellipsis">Lucky Braids uses the highest quality ingredients. The Shampoo and Spray here is a long testimonial that should have an ellipsis at overflow. here is a long testimonial that should have an ellipsis at overflow.here is a long testimonial that should have an ellipsis at overflow.</p>
+            </div>
+            <div class="arrow-down"></div>
+            <p class="testimonial-author">Kim Prince, Samsung Super League Championship Team</p>
         </div>
-        <div class="arrow-down"></div>
-        <p class="testimonial-author">Obi-Wan Kenobi</p>
-    </div>
-    <div class="mix category-1" >
-        <div class="testimonial">
-            <p>This product is fantastic! This is a sample testimonial. Before I bought lucky braids, ....</p>
+    </a>
+
+    <!-- IAN Shampoo-->
+    <a href="http://www.shinyhappyhorses.com/pages/ian-millar">
+        <div class="mix category-1">
+            <div class="testimonial">
+            <img src="https://cdn.shopify.com/s/files/1/0529/1857/files/BigsMane_web_11221c0e-c4ac-4a6e-bde0-9d53dcabfa73.jpg?3947" style="margin:0 5px 0 0;"/>
+                <p>Before using Lucky Braids my grey horses' coats were not bright. Now, all of our...</p>
+            </div>
+            <div class="arrow-down"></div>
+            <p class="testimonial-author">Lori Green. Mgr. Millar Brooke Farm for Ian Millar</p>
         </div>
-        <div class="arrow-down"></div>
-        <p class="testimonial-author">Obi-Wan Kenobi</p>
-    </div>
-    <div class="mix category-1" >
-        <div class="testimonial">
-            <p>This product is fantastic! This is a sample testimonial. Before I bought lucky braids, ....</p>
+    </a>
+
+
+    <!-- KIM Whitener-->
+    <a href="https://cdn.shopify.com/s/files/1/0529/1857/files/BigsMane_web_11221c0e-c4ac-4a6e-bde0-9d53dcabfa73.jpg?3947">
+        <div class="mix category-2">
+            <div class="testimonial">
+            <img src="https://cdn.shopify.com/s/files/1/0529/1857/files/BigsMane_web_11221c0e-c4ac-4a6e-bde0-9d53dcabfa73.jpg?3947" style="margin:0 5px 0 0;"/>
+                <p>Lucky Braids uses the highest quality ingredients. The Shampoo and Spray ...</p>
+            </div>
+            <div class="arrow-down"></div>
+            <p class="testimonial-author">Kim Prince, Samsung Super League Championship Team</p>
         </div>
-        <div class="arrow-down"></div>
-        <p class="testimonial-author">Obi-Wan Kenobi</p>
-    </div>
-    <div class="mix category-1" >
-        <div class="testimonial">
-            <p>This product is fantastic! This is a sample testimonial. Before I bought lucky braids, ....</p>
-        </div>
-        <div class="arrow-down"></div>
-        <p class="testimonial-author">Obi-Wan Kenobi</p>
-    </div>
-    <div class="mix category-1" >
-        <div class="testimonial">
-            <p>This product is fantastic! This is a sample testimonial. Before I bought lucky braids, ....</p>
-        </div>
-        <div class="arrow-down"></div>
-        <p class="testimonial-author">Obi-Wan Kenobi</p>
-    </div>
-    <div class="mix category-1" >
-        <div class="testimonial">
-            <p>This product is fantastic! This is a sample testimonial. Before I bought lucky braids, ....</p>
-        </div>
-        <div class="arrow-down"></div>
-        <p class="testimonial-author">Obi-Wan Kenobi</p>
-    </div>
-    <div class="mix category-1" >
-        <div class="testimonial">
-            <p>This product is fantastic! This is a sample testimonial. Before I bought lucky braids, ....</p>
-        </div>
-        <div class="arrow-down"></div>
-        <p class="testimonial-author">Obi-Wan Kenobi</p>
-    </div>
+    </a>
+
+
+    <div class="gap"></div>
+    <div class="gap"></div>
+    <div class="gap"></div>
+    <div class="gap"></div>
 
 </div>
 
@@ -435,7 +471,6 @@ $(function(){
         });
 </script>
 
- 
   <script>
   /**!
  * MixItUp v2.1.5
