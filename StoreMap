@@ -119,6 +119,29 @@ p.infobox {
     border-width: 5px;
     border-color: #B68354;
 }
+
+#nav {
+    display: table;
+    height: 87px;
+    width: 100%;
+}
+
+#nav li {
+    display: table-cell;
+    height: 87px;
+    width: 16.666666667%;  /* (100 / numItems)% */
+    line-height: 87px;
+    text-align: center;
+    border-right: 40px solid #ffffff;
+    white-space: nowrap;
+}​
+
+@media (max-width: 767px) {
+    #nav li {
+        display: block;
+        width: 100%;
+    }
+}
 --></style>
 
 <body>
@@ -126,30 +149,37 @@ p.infobox {
 <div class="header">
 <div class="container content">
 <div class="sixteen columns header_border">
+<h2><strong>Buy online</strong></h2>
+
+<!--
+<p><a href="http://www.shinyhappyhorses.com/collections/all" target="_blank">Lucky Braids</a>	|	|	<a href="http://smile.amazon.com/gp/aag/main/ref=olp_merch_name_1?ie=UTF8&asin=B004TIMLVK&isAmazonFulfilled=0&seller=A2YGRE26E7DOAC" target="_blank">Amazon</a>	|	|	<a href="http://www.ebay.com/usr/topturnout" target="_blank">Ebay</a>	|	|	<a href="https://www.smartpakequine.com/search/search?searchTerm=lucky%20braids" target="_blank">SmartPak</a>	|	|	<a href="http://shop.farmvet.com/?x=0&y=0&search=lucky+braids" target="_blank">Farmvet</a>	|	|	<a href="http://www.shop.equinetan.com/main.sc" target="_blank">Equine Tack & Nutritionals</a>	|	|	<a href="http://www.doversaddlery.com/lucky-braids--braiding-yarn/p/X1-10001" target="_blank">Dover Saddlery</a></p>-->
+
+
+<ul id="nav">
+    <li><a href="http://www.shinyhappyhorses.com/collections/all" target="_blank">Lucky Braids</a></li>
+    <li><a href="http://smile.amazon.com/gp/aag/main/ref=olp_merch_name_1?ie=UTF8&asin=B004TIMLVK&isAmazonFulfilled=0&seller=A2YGRE26E7DOAC" target="_blank">Amazon</a></li>
+    <li><a href="http://www.ebay.com/usr/topturnout" target="_blank">Ebay</a></li>
+    <li><a href="https://www.smartpakequine.com/search/search?searchTerm=lucky%20braids" target="_blank">SmartPak</a></li>
+    <li><a href="http://shop.farmvet.com/?x=0&y=0&search=lucky+braids" target="_blank">Farmvet</a></li>
+    <li><a href="http://www.shop.equinetan.com/main.sc" target="_blank">Equine Tack & Nutritionals</a></li>
+    <li><a href="http://www.doversaddlery.com/lucky-braids--braiding-yarn/p/X1-10001" target="_blank"-->Dover Saddlery</a></p></li>
+</ul>
+
+
+
+
+
+
+
+
+<hr />
+<h2><strong>Or in a store</strong></h2>
+
+
+
 <p><iframe src="//batchgeo.com/map/3035b6fa7fa0b21dd3fc37fe850a6002" frameborder="0" width="100%" height="550" style="border: 1px solid #aaa; border-radius: 10px;"></iframe></p>
 <p><small>View <a href="http://batchgeo.com/map/3035b6fa7fa0b21dd3fc37fe850a6002">full screen map</a></small></p>
 
-<h1></h1>
-<h2><strong>Or buy Online</strong></h2>
-
-<p><a href="http://www.shinyhappyhorses.com/collections/all" target="_blank">Lucky Braids</a></p>
-
-<p><a href="http://smile.amazon.com/gp/aag/main/ref=olp_merch_name_1?ie=UTF8&asin=B004TIMLVK&isAmazonFulfilled=0&seller=A2YGRE26E7DOAC" target="_blank">Amazon</a></p>
-
-
-
-<p><a href="http://www.ebay.com/usr/topturnout" target="_blank">Ebay</a></p>
-
-<p><a href="https://www.smartpakequine.com/search/search?searchTerm=lucky%20braids" target="_blank">SmartPak</a></p>
-
-<p><a href="http://shop.farmvet.com/?x=0&y=0&search=lucky+braids" target="_blank">Farmvet</a></p>
-
-
-
-<p><a href="http://www.shop.equinetan.com/main.sc" target="_blank">Equine Tack & Nutritionals</a></p>
-
-
-<p><a href="http://www.doversaddlery.com/lucky-braids--braiding-yarn/p/X1-10001" target="_blank">Dover Saddlery</a></p>
 
 
 
