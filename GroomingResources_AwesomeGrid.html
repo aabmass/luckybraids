@@ -855,11 +855,16 @@ $(function(){
     var params = getUrlVars();
     var firstCategory = params["firstcat"];
     var hideNav = params["hidenav"];
+    var name = params["name"];
 
     if (hideNav != null && 
         hideNav.toUpperCase() === "TRUE") {
 
         $(".controls").hide();
+    }
+
+    if (name != null) {
+        $(".controls").text("<h2><strong>" + name + "</strong></h2>");
     }
 
   // Instantiate MixItUp with some custom options:
