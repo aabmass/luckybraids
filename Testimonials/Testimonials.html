@@ -1360,6 +1360,55 @@ a:visited {
 </div>
 
 <script>
+var heightsOrig = [];
+
+function forceResize() {
+    if (heightsOrig.length === 0) return;
+
+    $("div .testimonial").each(function(index) {
+        $(this).height(heightsOrig[index]);
+    });
+}
+
+function resizeByRow() {
+    forceResize();
+    var testims = $("div .testimonial");
+
+    var heights = [];                   //nonzero heights
+    var heightsKeySet = [];     //heights index to testim index
+    var heightsToSet = [];            //what they will be after the process
+
+    testims.each(function(index) {
+        heightsToSet[index] = 0; //set all to zero
+
+        var h = $(this).height();
+        if (!$(this).is(":hidden")) {
+            heights.push(h);
+            heightsKeySet[heights.length - 1] = index;
+            console.log("Mapped " + (heights.length - 1) + " to " + index);
+        }
+    });
+
+    //used for resetting the size without shrinking the items
+    if (heightsOrig.length === 0)
+        heightsOrig = heights.slice(0);
+
+    for (var i = 0; i < heights.length; i += 3) {
+        var max = Math.max(heights[i], heights[i + 1], heights[i + 2]);
+        
+        heightsToSet[heightsKeySet[i]] = max;
+        heightsToSet[heightsKeySet[i + 1]] = max;
+        heightsToSet[heightsKeySet[i + 2]] = max;
+    }
+    
+    testims.each(function(index) {
+        $(this).height(heightsToSet[index]);
+        $(this).animate({
+            height: heightsToSet[index]
+        }, 200);
+    });
+}
+
 function getUrlVars() {
     var vars = [], hash;
     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -1395,9 +1444,16 @@ $(function() {
         $("div .controls").show();
     }
     $container.mixItUp({
-       load: {
-           filter: firstCategory
-       }
+        animation: {
+            enable: true
+        },
+        load: {
+            filter: firstCategory
+        },
+        callbacks: {
+            onMixStart: forceResize,
+            onMixEnd: resizeByRow
+        }
     });
 });
 </script>
