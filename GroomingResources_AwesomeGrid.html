@@ -844,12 +844,13 @@ $(function(){
 
     if (hideNav != null && 
         hideNav.toUpperCase() === "TRUE") {
-
         $(".controls").hide();
     }
 
     if (name != null) {
-        $(".controls").text("<h2><strong>" + name + "</strong></h2>");
+        $("div .controls").empty();
+        $("div .controls").append("<h2><strong>" + name + "</strong></h2>");
+        $("div .controls").show();
     }
 
   // Instantiate MixItUp with some custom options:
