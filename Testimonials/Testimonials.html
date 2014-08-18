@@ -1360,8 +1360,45 @@ a:visited {
 </div>
 
 <script>
-$(function(){
-        $('#Container').mixItUp();
-        });
+function getUrlVars() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++) {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
+$(document).ready(function() {
+    var hideNav = getUrlVars()["hidenav"];
+
+    if (hideNav != null && 
+        hideNav.toUpperCase() === "TRUE") {
+        $(".controls").hide();
+    }
+});
+
+$(function() {
+    $container = $('#Container'); // Cache the MixItUp container
+  
+    //parse for the firstcat parameter .../*.html?firstcat=...
+    var params = getUrlVars();
+    var firstCategory = params["firstcat"];
+    var name = params["name"];
+
+    if (name != null) {
+        name = name.replace("+", " ");
+        $("div .controls").empty();
+        $("div .controls").append("<h2><strong>" + name + "</strong></h2>");
+        $("div .controls").show();
+    }
+    $container.mixItUp({
+       load: {
+           filter: firstCategory
+       }
+    });
+});
 </script>
 </body>
