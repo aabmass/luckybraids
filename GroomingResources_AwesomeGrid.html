@@ -854,6 +854,13 @@ $(function(){
     //parse for the firstcat parameter .../*.html?firstcat=...
     var params = getUrlVars();
     var firstCategory = params["firstcat"];
+    var hideNav = params["hidenav"];
+
+    if (hideNav != null && 
+        hideNav.toUpperCase() === "TRUE") {
+
+        $(".controls").hide();
+    }
 
   // Instantiate MixItUp with some custom options:
   $container.mixItUp({
