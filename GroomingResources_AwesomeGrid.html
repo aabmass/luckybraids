@@ -839,6 +839,16 @@ ctitle:hover {
 
 
 <script>
+function getUrlVars() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++) {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
 
 $(function(){
 
@@ -846,8 +856,11 @@ $(function(){
       $container = $('#Container'), // Cache the MixItUp container
       $changeLayout = $('#ChangeLayout'); // Cache the changeLayout button
   
+    //parse for the firstcat parameter .../*.html?firstcat=...
+    var params = getUrlVars();
+    var firstCategory = params["firstcat"];
+
   // Instantiate MixItUp with some custom options:
-  
   $container.mixItUp({
     animation: {
       animateChangeLayout: true, // Animate the positions of targets as the layout changes
@@ -856,7 +869,10 @@ $(function(){
     },
     layout: {
       containerClass: 'list' // Add the class 'list' to the container on load
-    }
+    },
+    load: {
+        filter: firstCategory
+    }   
   });
   
   // MixItUp does not provide a default "change layout" button, so we need to make our own and bind it with a click handler:
@@ -886,39 +902,7 @@ $(function(){
       });
     }
   });
-
-  
 });
 </script>
-
-
-<script>
-function getUrlVars() {
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    for(var i = 0; i < hashes.length; i++) {
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
-    return vars;
-}
-  $(function(){
-  $('#Container').mixItUp();
-});
-
-    //parse for the firstcat parameter .../*.html?firstcat=...
-$(function(){
-    var params = getUrlVars();
-    var firstCategory = params["firstcat"];
-
-    $('#Container').mixItUp({
-        load: {
-            filter: firstCategory
-        }   
-    });
-});
-</script>
-
 
 </body>
