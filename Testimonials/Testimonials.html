@@ -1371,7 +1371,6 @@ function forceResize() {
 }
 
 function resizeByRow() {
-    forceResize();
     var testims = $("div .testimonial");
 
     var heights = [];                   //nonzero heights
@@ -1402,10 +1401,9 @@ function resizeByRow() {
     }
     
     testims.each(function(index) {
-        $(this).height(heightsToSet[index]);
         $(this).animate({
             height: heightsToSet[index]
-        }, 200);
+        }, 500);
     });
 }
 
