@@ -1098,7 +1098,7 @@ a:visited {
         <div class="mix category-4">
             <div class="testimonial">
                 <img src="https://cdn.shopify.com/s/files/1/0529/1857/files/GreyForelock.jpg?4852" alt="Grey" />
-                <p class="ellipsis">Braids have been turning out pretty well with the help of Ruthann’s video!</p>
+                <p class="ellipsis">Braids have been turning out pretty well with the help of Ruthann's video!</p>
             </div>
             <div class="arrow-down"></div>
             <p class="testimonial-author">Jana Lyle Ellerbusch</p>
@@ -1153,7 +1153,7 @@ a:visited {
     <!-- Horse Journal2 Braiding -->
     <div class="mix category-4">
         <div class="testimonial">
-            <p class="ellipsis">If you’re looking to kick off your braiding career—be it as an amateur or a profession­al—you can’t go wrong with Lucky Braids by Ruthann’s Better Braiding DVD/Tools.</p>
+            <p class="ellipsis">If you're looking to kick off your braiding career—be it as an amateur or a profession­al—you can't go wrong with Lucky Braids by Ruthann's Better Braiding DVD/Tools.</p>
         </div>
         <div class="arrow-down"></div>
         <p class="testimonial-author">Horse Journal</p>
@@ -1189,7 +1189,7 @@ a:visited {
     <!-- Horse Journal3 Braiding -->
     <div class="mix category-4">
         <div class="testimonial">
-            <p class="ellipsis">Our favorite was Lucky Braids Yarn. It’s strong but thin and easy to work with. Colors work beautifully.</p>
+            <p class="ellipsis">Our favorite was Lucky Braids Yarn. It's strong but thin and easy to work with. Colors work beautifully.</p>
         </div>
         <div class="arrow-down"></div>
         <p class="testimonial-author">Horse Journal</p>
@@ -1337,7 +1337,7 @@ a:visited {
     <!-- Horse Journal Braiding -->
     <div class="mix category-4">
         <div class="testimonial">
-            <p class="ellipsis">We recommend Lucky Braids by Ruthann’s Essential Braiding Tools.</p>
+            <p class="ellipsis">We recommend Lucky Braids by Ruthann's Essential Braiding Tools.</p>
         </div>
         <div class="arrow-down"></div>
         <p class="testimonial-author">Horse Journal</p>
@@ -1360,8 +1360,45 @@ a:visited {
 </div>
 
 <script>
-$(function(){
-        $('#Container').mixItUp();
-        });
+function getUrlVars() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++) {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
+$(document).ready(function() {
+    var hideNav = getUrlVars()["hidenav"];
+
+    if (hideNav != null && 
+        hideNav.toUpperCase() === "TRUE") {
+        $(".controls").hide();
+    }
+});
+
+$(function() {
+    $container = $('#Container'); // Cache the MixItUp container
+  
+    //parse for the firstcat parameter .../*.html?firstcat=...
+    var params = getUrlVars();
+    var firstCategory = params["firstcat"];
+    var name = params["name"];
+
+    if (name != null) {
+        name = name.replace("+", " ");
+        $("div .controls").empty();
+        $("div .controls").append("<h2><strong>" + name + "</strong></h2>");
+        $("div .controls").show();
+    }
+    $container.mixItUp({
+       load: {
+           filter: firstCategory
+       }
+    });
+});
 </script>
 </body>
