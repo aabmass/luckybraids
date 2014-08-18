@@ -1,0 +1,22 @@
+#preview-pane.bounded {
+	border: 1px dashed #CCC;
+	overflow: hidden;
+}
+
+.test_frame_wrapper{
+	border: 4px dashed #CCC;
+}
+
+.test_frame{
+	/*border: 1px dashed #999;*/
+}
+
+input[type=submit]#subscribe-submit{
+	width: 100%;
+}
+
+.test_container{
+
+	background-image: url('../images/cream_pixels.png');
+
+}
