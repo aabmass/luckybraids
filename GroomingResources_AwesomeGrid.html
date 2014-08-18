@@ -839,6 +839,7 @@ ctitle:hover {
 
 
 <script>
+
 $(function(){
 
   var layout = 'list', // Store the current layout as a variable
@@ -885,14 +886,37 @@ $(function(){
       });
     }
   });
+
   
 });
 </script>
 
 
 <script>
+function getUrlVars() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++) {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
   $(function(){
   $('#Container').mixItUp();
+});
+
+    //parse for the firstcat parameter .../*.html?firstcat=...
+$(function(){
+    var params = getUrlVars();
+    var firstCategory = params["firstcat"];
+
+    $('#Container').mixItUp({
+        load: {
+            filter: firstCategory
+        }   
+    });
 });
 </script>
 
