@@ -848,6 +848,7 @@ $(function(){
     }
 
     if (name != null) {
+        name = name.replace("+", " ");
         $("div .controls").empty();
         $("div .controls").append("<h2><strong>" + name + "</strong></h2>");
         $("div .controls").show();
