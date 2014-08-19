@@ -1,0 +1,225 @@
+Creating a nice looking blog post
+
+*****************************************************************************************************************
+
+Start an html file in a text editor:
+
+
+
+1. Open notepad
+
+3. Save the file as my_blog_post_name.html
+
+2. Now just put together the post using whatever pieces you need from the sections below
+
+*****************************************************************************************************************
+
+If you are going to put images in your blog post:
+
+
+
+1. Go to the Shopify admin page. lucky-braids.myshopify.com/admin
+
+2. Click Settings on the bottom left
+
+3. Now click Files on the left
+
+4. Click upload files on the top right.
+
+5. Upload your image
+
+	* the image should not be more than 100 kb so that it loads well
+	
+	*The file can be jpeg, png, svg, pdf. A .psd will NOT work
+	
+	*Make a note of the link to the image once it pops up on the top of the list
+
+*****************************************************************************************************************
+
+To insert an image that appears to the right of the text, it takes up 50% of the page:
+
+*Use the link you got from the step above in this step.
+
+*Only change the text in all caps
+
+*This goes at the very top of your file
+
+*You can have more than one of these in a post if you are posting 
+	multiple pictures, just space them out among the text
+
+
+<div class="figure"><a href="PASTE IMAGE LINK INSIDE THESE QUOTES"><img src="PASTE IMAGE LINK INSIDE THESE QUOTES" 
+alt="GIVE THE IMAGE A SHORT NAME, THIS PART DOES NOT REALLY MATTER AT ALL" style="float:right;margin:0 5px 0 0;"/></a><p> ADD THE PICTURE'S CAPTION BETWEEN THESE OR LEAVE BLANK IF THERE IS NONE </p></div>
+
+
+*****************************************************************************************************************
+
+To start typing:
+
+This tag <p> to start a paragraph and then close the paragraph with </p>
+
+For example:
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>Horses are great! I like horses.</p>
+
+<p>This is a new paragraph, there will be a space between the paragraph above and this one
+	one the page is pasted in your blog</p>
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+* Don't worry about adding new lines with the enter key, they dont show up once you paste.
+
+* Instead of using the & character, replace it with &amp; so that it does not get messed
+	Up
+
+
+*****************************************************************************************************************
+
+To make a larger break between two things, use the <br /> tag.
+
+OR use the <hr /> tag to make a break that has a visible horizontal line.
+
+*You can chain these until the break is as big as you want it.
+
+Example:
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+<p>Horses are great! I like horses.</p>
+
+<br />
+
+<p>There is a bigger break between this paragraph and the last one than if you had not used the <br /></p>
+
+<br /><br /><br />
+
+<p>There is an even bigger break between the second paragraph and this paragraph.</p>
+
+<hr />
+
+<p>There is a faint horizontal line above this paragraph. It is good for dividing but do not overuse it.</p>
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*****************************************************************************************************************
+
+To make words bold:
+
+Use the <b> tag to start a section of bold text and end the section with </b>
+
+Example:
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>These words are not bold but <b>these words are</b></p>
+
+<p><b>This whole sentence is bold.</b></p>
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+To make word italic use <i> instead of <b>
+
+You could make words bold and italic too by using both
+
+
+Example:
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>These words are not italic but <i>these words are</i></p>
+
+<p><b><i>This whole sentence is bold and italic.</i></b></p>
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*****************************************************************************************************************
+
+To do headers:
+
+Use <h2> to make a header. Close it with </h2>
+
+Use <h2><b> to make a bold header. Close this with </b></h2>
+
+
+Example:
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<h2>These words are in a header</h2>
+
+<h2><b>This is a bold header</b></h2>
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+*****************************************************************************************************************
+
+To do a bulleted or numbered list:
+
+This does bullets <ul>
+
+This does numbers <ol>
+
+Each item in the list is places in a <li> tag
+
+Close each item with a </li>
+
+Then close the list with either a </ul> or a </ol> 
+	depending on what you used.
+	
+Example:
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>This is a bulleted list</p>
+
+<ul>
+	<li>This is the first item. It can be as long as you want.</li>
+	<li>Another item</li>
+	<li>A third item</li>
+</ul>
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p>This is a numbered list. The numbers automatically appear when you paste.</p>
+
+<ol>
+	<li>This is the first item. It can be as long as you want.</li>
+	<li>Another item</li>
+	<li>A third item</li>
+</ol>
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+*****************************************************************************************************************
+
+To add hyperlinks:
+
+Use this: <a href="YOUR LINK HERE" target="_blank">Click Here, This text will be a link and will be blue.</a>
+
+
+Example:
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+<p><a href="YOUR LINK" target="_blank">This is all a hyperlink inside a paragraph.</a></p>
+
+<ul>
+	<li>This not a link. <a href="YOUR LINK" target="_blank">This a link inside of a bulleted list</a></li>
+	<li>Another item</li>
+	<li>A third item</li>
+</ul>
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+
+Now your post is finished.
+
+Create a new blog and then click the button in the content box that looks like this: <>
+
+Paste your whole code into there and then save it.
+
+Add tags or whatever you want to all the options below.
+
+Publish the post, make sure it's visible. By default it's hidden.
+
+Ask me if you have questions or google it.
