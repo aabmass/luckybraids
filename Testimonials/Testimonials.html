@@ -1359,6 +1359,7 @@ a:visited {
 </div>
 
 <script>
+//will be the css "height: auto" heights
 var heightsOrig = [];
 
 function isMobileSized() {
@@ -1368,46 +1369,30 @@ function isMobileSized() {
 }
 
 function forceResize() {
-    if (heightsOrig.length === 0) return;
-
-    $("div .testimonial").each(function(index) {
-        $(this).height(heightsOrig[index]);
-    });
+    $("div .testimonial").css("height", "auto");
 }
 
 function resizeByRow() {
     var testims = $("div .testimonial");
 
-    var heights = [];           //nonzero heights
-    var heightsKeySet = [];     //heights index to testim index
-    var heightsToSet = [];      //what they will be after the process
+    var heights = []; //nonzero heights
+    var heightsKeySet = []; //heights index to testim index
+    var heightsToSet = heightsOrig.splice(0); //at least the min
 
-    var finished; //try and prove false
-    do {
-        finished = true;
-        testims.each(function(index) {
-            heightsToSet[index] = 0; //set all to zero
+   testims.each(function(index) {
+       var h = $(this).height();
 
-            var h = $(this).height();
-
-            //if any h = 0, do forceResize() and start over
-            if (h == 0) {
-                forceResize();
-                finished = false;
-                return false; //break from each()
-            }
-
-            if (!$(this).is(":hidden")) {
-                heights.push(h);
-                heightsKeySet[heights.length - 1] = index;
-            }
-        });
-    }
-    while (!finished);
+       if (!$(this).is(":hidden")) {
+           heights.push(h);
+           heightsKeySet[heights.length - 1] = index;
+       }
+   });
 
     //used for resetting the size without shrinking the items
-    if (heightsOrig.length === 0)
+    if (heightsOrig === null ||
+        heightsOrig.length === 0) {
         heightsOrig = heights.slice(0);
+    }
 
     for (var i = 0; i < heights.length; i += 3) {
         var max = Math.max(heights[i], heights[i + 1], heights[i + 2]);
@@ -1444,7 +1429,7 @@ $(document).ready(function() {
     }
 });
 
-$(function() {
+function startMixItUp() {
     $container = $('#Container'); // Cache the MixItUp container
   
     //parse for the firstcat parameter .../*.html?firstcat=...
@@ -1491,6 +1476,10 @@ $(function() {
             }
         });
     }
-});
+}
+
+//start MixItUp AFTER the image load since they
+//change the container sizes
+window.onload = startMixItUp;
 </script>
 </body>
