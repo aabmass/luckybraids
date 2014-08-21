@@ -1376,23 +1376,34 @@ function forceResize() {
 }
 
 function resizeByRow() {
-    //resize to one column if mobile
-
     var testims = $("div .testimonial");
 
     var heights = [];           //nonzero heights
     var heightsKeySet = [];     //heights index to testim index
     var heightsToSet = [];      //what they will be after the process
 
-    testims.each(function(index) {
-        heightsToSet[index] = 0; //set all to zero
+    var finished; //try and prove false
+    do {
+        finished = true;
+        testims.each(function(index) {
+            heightsToSet[index] = 0; //set all to zero
 
-        var h = $(this).height();
-        if (!$(this).is(":hidden")) {
-            heights.push(h);
-            heightsKeySet[heights.length - 1] = index;
-        }
-    });
+            var h = $(this).height();
+
+            //if any h = 0, do forceResize() and start over
+            if (h == 0) {
+                forceResize();
+                finished = false;
+                return false; //break from each()
+            }
+
+            if (!$(this).is(":hidden")) {
+                heights.push(h);
+                heightsKeySet[heights.length - 1] = index;
+            }
+        });
+    }
+    while (!finished);
 
     //used for resetting the size without shrinking the items
     if (heightsOrig.length === 0)
@@ -1407,7 +1418,7 @@ function resizeByRow() {
     }
     
     testims.each(function(index) {
-        $(this).stop().animate({
+        $(this).animate({
             height: heightsToSet[index]
         }, 500);
     });
@@ -1450,7 +1461,7 @@ $(function() {
 
     if (isMobileSized()) {
         forceResize();
-        $(".mix").stop().animate({
+        $(".mix").animate({
             width: $("#Container").width()
         }, 500);
 
@@ -1467,7 +1478,9 @@ $(function() {
     else {
         $container.mixItUp({
             animation: {
-                enable: true
+                enable: true,
+                queue: false,
+                animateResizeContainer: false
             },
             load: {
                 filter: firstCategory
