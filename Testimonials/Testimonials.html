@@ -1480,6 +1480,7 @@ function startMixItUp() {
 
 //start MixItUp AFTER the image load since they
 //change the container sizes
-window.onload = startMixItUp;
+$(document).ready(startMixItUp);
+//window.onload = startMixItUp;
 </script>
 </body>
